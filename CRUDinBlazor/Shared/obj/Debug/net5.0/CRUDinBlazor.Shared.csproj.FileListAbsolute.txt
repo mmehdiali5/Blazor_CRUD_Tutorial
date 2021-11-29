@@ -1,0 +1,12 @@
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\bin\Debug\net5.0\CRUDinBlazor.Shared.deps.json
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\bin\Debug\net5.0\CRUDinBlazor.Shared.dll
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\bin\Debug\net5.0\ref\CRUDinBlazor.Shared.dll
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\bin\Debug\net5.0\CRUDinBlazor.Shared.pdb
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\CRUDinBlazor.Shared.csproj.AssemblyReference.cache
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\CRUDinBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\CRUDinBlazor.Shared.AssemblyInfoInputs.cache
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\CRUDinBlazor.Shared.AssemblyInfo.cs
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\CRUDinBlazor.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\CRUDinBlazor.Shared.dll
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\ref\CRUDinBlazor.Shared.dll
+C:\Users\ASUS\PUCIT Files\Web Engineering\CRUDinBlazor\CRUDinBlazor\Shared\obj\Debug\net5.0\CRUDinBlazor.Shared.pdb

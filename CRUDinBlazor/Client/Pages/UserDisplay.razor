@@ -1,0 +1,81 @@
+﻿@page "/userDisplay"
+@using CRUDinBlazor.Shared
+@inject HttpClient Http
+@using System.Net.Http.Json
+
+<h3>UserDisplay</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>username</th>
+                <th>age</th>
+                <th></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            @foreach(var user in users)
+            {
+            <tr>
+                <td>@user.username</td>
+                <td>@user.age</td>
+                <td><button class="btn btn-danger" @onclick="(()=>DeleteUser(user.username))">DELETE</button></td>
+                <td><button class="btn btn-primary" @onclick="(()=>updateUser(user))">UPDATE</button></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <EditForm Model="form" OnSubmit="submitRequest">
+        <div class="form-group">
+            <label>Username</label>
+            <InputText @bind-Value="form.username" class="form-control"></InputText>
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <InputNumber @bind-Value="form.age" class="form-control"></InputNumber>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </EditForm>
+@code {
+
+
+
+    List<UserInfo> users = new List<UserInfo>();
+    protected override async Task OnInitializedAsync()
+    {
+        users= await Http.GetFromJsonAsync<List<UserInfo>>("api/UserInfo");
+    }
+
+    UserInfo form = new UserInfo();
+
+    async void submitRequest()
+    {
+        if (form.id < 1)
+        {
+            await Http.PostAsJsonAsync<UserInfo>("api/UserInfo", form);
+        }
+        else
+        {
+            await Http.PutAsJsonAsync<UserInfo>("api/UserInfo", form);
+        }
+
+        users = await Http.GetFromJsonAsync<List<UserInfo>>("api/UserInfo");
+        await InvokeAsync(() => StateHasChanged());
+        form.id = 0;
+    }
+
+    async void DeleteUser(string username)
+    {
+        await Http.DeleteAsync($"api/UserInfo/{username}");
+        users = await Http.GetFromJsonAsync<List<UserInfo>>("api/UserInfo");
+        await InvokeAsync(() => StateHasChanged());
+    }
+
+    void updateUser(UserInfo user)
+    {
+        form = user;
+    }
+}
